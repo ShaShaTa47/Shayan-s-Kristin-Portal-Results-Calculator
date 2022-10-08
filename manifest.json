@@ -1,0 +1,42 @@
+{
+    "name": "Shayan's Kristin-Portal-Results-Calculator",
+    "key": "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC2K+QiAvgqlp+gIUnKxg7z5KY2jMZ/g1ay8c7RaFg/N1SJBaeVo+pwfP1euxS9FVEVRnEL/UMbjijxSqf0xnqthlKiTTt7R1SkGRgIzBU69bOB2BRAziFQYVfrbU6qiPOrzJk2phzyVsQMdM0wmfQ6IcDm4caiqzn3JdM02QZX/lBsP81yU01tBsJbhtzSvJMPtdY3IfrEj+Kg7CT/fyGAYMRVOs7g1SFoFk3yVGkpjH5N/p/ju/P5sowatlpWBb6CHDtAexpARjucMZraG7jFh4sEMJxxs/3CwNKCQD8Mcfkj0pJvYVc+0X+ZTmTw27Q4i0IsCfN0AfzImt4vys8JAgMBAAECggEAFIaEOy1OuRy0wlHx2qgfb+05qZCJvn0FwB6E5R0OwVuqeZBSqiZ4gCFjGmD1lJrh4oXn75gC70hAlnRJEYgp8yJ87cbKLokSUTV3GumktDqSFc2K9aTMBd6b7X2oxQfufZNNSYYkoYzzZKxl4KWeCg06ywDSFMq6Wp2PSydvQqtnByGkjveIGfsb5QibgZiJjEalleNYXlm4G0+8LCBM26Tl7+36zQizbLfIbyN+pzI0EMpfavRmyzBY2VyjHw9ZjpUy7vgjxCApEa3G9Q1MB78+/AThgEpem2AaGHOI+LPqrE1GqJH2yNy6EqasyY1yfyP2GP6hraTLg+s/RIE0AQKBgQDcr3SoQTtSHenoLEUIEARJpA0Nf91NReRewKFhl0lJMD3k7c3t8ljS0eQ9JDVc5NVKcZIjJ3uwakOWRvsW4dsmJxUIQQV8xyD8ZqMQLK92oA5GVMVzhFWcsTULO3tR/7THJTsT8/Dcve5ra1FeyIxzgxz8vIQx2gIeYMIPdr17CQKBgQDTUq7o1EyPIxfY0IdI33ns4wob5gavXmqHlsgwAhJ5eUH7HWSBuuk9Ag1c/0062SWqirK6X8TnMdb1Ci8VnVP/s6ehGceA9Rx8eques0pbop1hibdnp5+e/ehPl82toKznudqIQExsaqNIEOR8IeV3pbbTO7Xe7AXaMdLUTfO0AQKBgEVuYkqJc2trg+sK+pEF0QOGPKERqIOmSKpS+rMkkOcY6XA8LTz+sVlqtd9SpANc74ojXzH2OyEO3cLLBDZ3yqYfR6u4IUzXrZYbiJQPKwksZDFWfGTSrsjErAajqTHsPGknWoX1isM4cmmTcx9aA25YQud1PDYe++mo0YVh+01ZAoGBAMB8TOO5FO9ASOVts/x1yooyl6+ny6kLeD9+4WORT6CkCayhLj5YsUCn0OJHjeIvjvaTlY7b0u+/3wueNhsbDjsYOnUslSNqoILl/dL1fqKPMYl5trxM28Enh+aP4IHpm/UKvfpjjvkl/QqUkHpdKbXdFPW9KsEd/Yqs3VwSkQwBAoGAB/FSlxyzZff+RahPLRPLgmrhdLPSFkYzGiyxJz/LJM9CmgikhQjoVozkVVhoJI1ouc3Xmoc7Zqu41gPc4B8/4T2VhoykEiMQ1ur36O2UoQWtjHQq/jOWPe9KwNet9vGPAWIRft75l9KRo0RWQ9/AofrulX0XneknEGZH5c/Uq60=",
+    "icons": {
+        "16": "IconFolderGoogle/kristinicon.png",
+        "48": "IconFolderGoogle/kristinicon.png",
+        "128": "IconFolderGoogle/kristinicon.png"
+    },
+    "description": "An extension for the use of https://portal.kristin.school.nz/group/portal/my-info/results",
+    "manifest_version": 3,
+    "version": "1.0",
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting",
+        "nativeMessaging"
+    ],
+    "host_permissions": [
+        "<all_urls>",
+        "http://*/*",
+        "https://*/*",
+        "https://portal.kristin.school.nz/*"
+    ],
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": [
+                "https://portal.kristin.school.nz/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ]
+}
