@@ -42,8 +42,6 @@ Turn on the switch on the top right of the page that says "Developer mode"
 Press “Load Unpacked” on the top left
 Select extracted/unzipped file in “Step 2”
 
-User collected data
-Your full name according to your Kristin Portal mychild_iframe aspx file through the usage of a DOM “lb_name” ID selector executed in contentScript.js.
 All your grades on the Kristin Portal iframe or commportal aspx through the usage of a DOM “res_grd_cell” class selector executed in contentScript.js.
 
 How does this extension work?
@@ -62,15 +60,11 @@ Chart.js is used to style the histogram which is displayed after the “Calculat
 
 Permissions
 "permissions": [
-       "tabs",
        "activeTab",
-       "scripting",
-       "nativeMessaging"
+
 ],
 "host_permissions": [
-       "<all_urls>",
-       "http://*/*",
-       "https://*/*",
+
        "https://portal.kristin.school.nz/*"
 ],
 
