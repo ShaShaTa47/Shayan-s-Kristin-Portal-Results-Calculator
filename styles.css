@@ -1,0 +1,96 @@
+body {
+    width: 450px;
+    /*\\border-radius: 50%;*/
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    /*background-color: #008a8c;*/
+    /*background-color: #0399ac;*/
+    /*background-color: #5ea4bf; good*/
+    background-color: #31393c;
+    /*color: #2f3b42;*/
+    /*color: #ac3303;*/
+    /*color: #353535;*/
+    color:#5ea4bf;
+    /*font-weight: bold;*/
+}
+
+.container {
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 12px;
+}
+
+form {
+    justify-self: center;
+}
+
+input { 
+    margin-top: 5px;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: rgba(54,127,78,0.5);
+    /*color: #2f3b42;
+    color: #353535;*/
+    color:#fffcf2;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.errorr {
+    color: red;
+    opacity: 0.5;
+}
+
+a {
+    text-decoration: none;
+    text-decoration: underline;
+    color:#5ea4bf
+    /*color: #41337a;*/
+}
+
+#radiohis {
+    display: block;
+}
+
+
+
+.hidehis {
+    position: absolute;
+}
+
+.thatlinkk {
+    font-size: 15pt;
+}
+
+/*#chartbox {
+    width: 0;
+}*/
+
+.classcheck {
+    display: flex;
+    flex-direction: column;
+}
+
+#calcbut {
+    /*color:#5ea4bf;
+    color: rgb(93, 17, 17);*/
+    font-weight:bolder;
+    font-size: larger;
+}
+
+input {
+    cursor: grab;
+}
