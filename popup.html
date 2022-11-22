@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <script src="histochart.js"></script>
+    </head>
+    <body>
+        <div class="cir container page__hidden">
+            <div class="formbox">
+                <form id="form1">
+                    <!--<label for="user-id"><strong>User-ID</strong></label><br>-->
+                    <!--<p>The 'Calculate' functionality can be used on either: (1) <a target="_blank" href="https://portal.kristin.school.nz/group/portal/my-info/results">this link</a>; or (2) through using the 'Find Page' functionality which requires your user-ID.</p>-->
+                    <input type="text" id="user-id" name="user-id" placeholder="Search Kristin User-ID"><br>
+                    <input type="submit" value="Find Page" class="submit-button" id="fndpgsub">
+                </form>
+            </div>
+            <div id="calcformbox">
+                <form id="form2">
+                    <input id='calcbut' type="submit" value="Calculate" class="submit-button">        
+                </form>
+            </div>
+            <!--<p class="hidden" id="thattextthing">Check on the top-left of your page below your name for the mean, mode etc.</p>-->
+            <p class="hidden errorr" id="thattextthing" style="color: red;"><strong>Error 1:</strong><br>This error can usually be resolved by refreshing your results page, and making sure you are <a target="_blank" href="https://portal.kristin.school.nz/group/portal/my-info/results">here.</a></p>
+            <!--<label for="radio" id="histolab" class="hidden">Histogram (click)</label>
+            <input type="radio" class="hidden" id="radiohis" value="">-->
+            <div class="formbox" id="specsubbox">
+                <form id="form3">
+                    <input type="submit" value="Specify Subjects" class="submit-button">
+                </form>
+                <form id="form5">
+                    <input type="submit" value="Add Grade" class="submit-button">
+                </form>   
+            </div>
+            <form id="form6" class="hidden">
+                <label for="gradename">Name of your grade </label>
+                <input type="text" id="gradename" name="gradename" value="type here"><br><br>
+                <label for="vol">Grade (between 0 and 8):</label>
+                <input type="range" id="vol" name="vol" min="0" max="8">
+                <p id="volval">4</p>
+                <input type="submit" value="Add Grade" class="submit-button">
+            </form>      
+            <div id="classcheck"></div>
+            <!--DO NOT ADD FORM BOX DIV TO THIS FORM 4 AS IT WILL REMOVE THE PURPOSE OF THE SCRIPTS JS FUNCTIONALITY-->
+            <form class="hidden" id="form4">
+                <input type="submit" value="Select Subjects" class="submit-button">
+            </form>
+
+            <div id="chartbox" class="hidden hidehis" style="justify-self: center; width: 500px; height: 400px;"><canvas class="hidden hidehis" id="histogram" width="0" height="0"></canvas></div>
+
+            <div class="styleformbox">
+                <p>Dark Mode&nbsp;&nbsp;&nbsp;</p>
+                <label class="switch">                        
+                    <input id='slidertheme' type="checkbox">
+                    <span class="slider round"></span>
+                </label>                
+            </div>
+            <div class="styleformbox">
+                <p>Hide Grades&nbsp;&nbsp;&nbsp;</p>
+                <label class="switch">                        
+                    <input id='hidegradeswitch' type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <!--<div id="emptbef"></div>-->
+            <p><a href="https://chrome.google.com/webstore/detail/kristin-portal-dpmyp-stat/badgbglcpnemapnankpimlkafdjolbnp" target="_blank">Leave a review (:</a></p>
+            <p id="feedtexttt"><a href="mailto:47135@kristin.school.nz" target="_blank">Contact and Feeback</a>&nbsp&nbsp&nbsp<a target="_blank" href="https://docs.google.com/document/d/1NtAdCk8kqiyUwLkbgs84lanC48kSFokyx5MddS9nZa0/edit?usp=sharing">User-Guide</a>&nbsp&nbsp&nbsp<a target="_blank" href="https://docs.google.com/document/d/1h5gQvCR97NKujUnAD8hBkx-ET9nBAb1SOZzTsFNwukw/edit?usp=sharing">Privacy Policy</a></p>
+        </div>
+    </body>
+</html>

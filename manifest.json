@@ -1,0 +1,29 @@
+{
+    "name": "Results calculator for Kristin Portal",
+    "icons": {
+        "128": "IconFolder/128.png",
+        "48": "IconFolder/48.png",
+        "16": "IconFolder/16.png"
+    },
+    "description": "Calculate statistical features of your 'results page' with dark mode, and more.",
+    "manifest_version": 3,
+    "version": "2.1",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": [
+                "https://portal.kristin.school.nz/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ]
+}
